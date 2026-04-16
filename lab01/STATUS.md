@@ -19,57 +19,57 @@
 ### 1. Доменный слой (`backend/app/domain/`)
 
 **user.py**
-- [ ] Класс User
-- [ ] Валидация email
+- ✅ Класс User
+- ✅ Валидация email
 
 **order.py**
-- [ ] Enum OrderStatus
-- [ ] Класс OrderItem
-- [ ] Класс OrderStatusChange
-- [ ] Класс Order с методами
+- ✅ Enum OrderStatus
+- ✅ Класс OrderItem
+- ✅ Класс OrderStatusChange
+- ✅ Класс Order с методами
 
 ### 2. Репозитории (`backend/app/infrastructure/repositories.py`)
 
 **UserRepository**
-- [ ] save()
-- [ ] find_by_id()
-- [ ] find_by_email()
-- [ ] find_all()
+- ✅ save()
+- ✅ find_by_id()
+- ✅ find_by_email()
+- ✅ find_all()
 
 **OrderRepository**
-- [ ] save()
-- [ ] find_by_id()
-- [ ] find_by_user()
-- [ ] find_all()
+- ✅ save()
+- ✅ find_by_id()
+- ✅ find_by_user()
+- ✅ find_all()
 
 ### 3. Сервисы (`backend/app/application/`)
 
 **UserService**
-- [ ] register()
-- [ ] get_by_id()
-- [ ] get_by_email()
-- [ ] list_users()
+- ✅ register()
+- ✅ get_by_id()
+- ✅ get_by_email()
+- ✅ list_users()
 
 **OrderService**
-- [ ] create_order()
-- [ ] get_order()
-- [ ] add_item()
-- [ ] pay_order() ⚠️ КРИТИЧНО!
-- [ ] cancel_order()
-- [ ] ship_order()
-- [ ] complete_order()
-- [ ] list_orders()
-- [ ] get_order_history()
+- ✅ create_order()
+- ✅ get_order()
+- ✅ add_item()
+- ✅ pay_order() ⚠️ КРИТИЧНО!
+- ✅ cancel_order()
+- ✅ ship_order()
+- ✅ complete_order()
+- ✅ list_orders()
+- ✅ get_order_history()
 
 ### 4. SQL Миграция (`backend/migrations/001_init.sql`)
 
-- [ ] Таблица order_statuses
-- [ ] Таблица users (с ограничениями)
-- [ ] Таблица orders (с ограничениями)
-- [ ] Таблица order_items (с ограничениями)
-- [ ] Таблица order_status_history
-- [ ] **Триггер против двойной оплаты** ⚠️ КРИТИЧНО!
-- [ ] Бонусные триггеры (опционально)
+- ✅ Таблица order_statuses
+- ✅ Таблица users (с ограничениями)
+- ✅ Таблица orders (с ограничениями)
+- ✅ Таблица order_items (с ограничениями)
+- ✅ Таблица order_status_history
+- ✅ **Триггер против двойной оплаты** ⚠️ КРИТИЧНО!
+- ✅ Бонусные триггеры (опционально)
 
 ## 🎯 Главное требование
 

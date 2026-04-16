@@ -1,7 +1,8 @@
 """Pydantic schemas for API request/response."""
 
+from dataclasses import field
 import uuid
-from datetime import datetime
+from datetime import datetime, timezone
 from decimal import Decimal
 from typing import List, Optional
 
@@ -18,7 +19,7 @@ class UserResponse(BaseModel):
     id: uuid.UUID
     email: str
     name: str
-    created_at: datetime
+    created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
 
     class Config:
         from_attributes = True
@@ -49,7 +50,7 @@ class OrderItemResponse(BaseModel):
 class OrderStatusChangeResponse(BaseModel):
     id: uuid.UUID
     status: str
-    changed_at: datetime
+    changed_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
 
 
 class OrderResponse(BaseModel):
@@ -57,7 +58,7 @@ class OrderResponse(BaseModel):
     user_id: uuid.UUID
     status: str
     total_amount: Decimal
-    created_at: datetime
+    created_at: datetime = field(default_factory=lambda: datetime.now(timezone.utc))
     items: List[OrderItemResponse] = []
 
     class Config:
